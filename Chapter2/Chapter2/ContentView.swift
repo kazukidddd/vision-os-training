@@ -12,7 +12,14 @@ import RealityKitContent
 struct ContentView: View {
     var body: some View {
         VStack {
-            Model3D(named: "Scene", bundle: realityKitContentBundle)
+            RealityView{ content in
+//                3Dモデルを読み込んでEntityに設定
+                let model = try! await Entity(named: "Scene",
+                                              in: realityKitContentBundle)
+                
+//                読み込んだ3Dモデルを登録
+                content.add(model)
+            }
                 .padding(.bottom, 50)
 
             Text("Hello, world!")
