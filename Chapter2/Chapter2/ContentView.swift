@@ -16,6 +16,9 @@ struct ContentView: View {
                 .padding(.bottom, 50)
 
             Text("Hello, world!")
+            Button("click") {
+                print("click!!")
+            }
         }
         .padding()
     }
