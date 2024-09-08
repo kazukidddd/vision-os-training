@@ -1,6 +1,7 @@
 {
   "images" : [
     {
+      "filename" : "omikuji_box.png",
       "idiom" : "vision",
       "scale" : "2x"
     }
